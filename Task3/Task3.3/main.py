@@ -15,7 +15,7 @@ for i in marks:
 count = 0
 for i in marks:
     for j in marks[i]:
-        if(j < 3):
+        if j < 3:
             count += 1
 print("Кількість заборгованостей: " + str(count))
 
