@@ -18,18 +18,20 @@ print("Menu:")
 for i in products:
     print(i[0].ljust(10) + " | " + str(i[1]) + " UAH/kg")
 
-print("-" * 30)
 buyDict = []
 while 1:
-    print("Enter the name of the product you want to buy (Enter \"buy\" if you want to buy the selected product)")
-    prod = input()
-    if prod.lower() == "buy":
-        break
-    print("Enter the quantity of goods (kg) you want to buy")
-    howMuch = input()
-
-    ifExist = False
     try:
+        print("-" * 30)
+        print("Enter the name of the product you want to buy (Enter \"buy\" if you want to buy the selected product)")
+        prod = input()
+        if prod.lower() == "buy":
+            break
+        print("Enter the quantity of goods (kg) you want to buy")
+        howMuch = float(input())
+        if howMuch <= 0:
+            print("The quantity of goods in kilograms must be greater than zero")
+            continue
+        ifExist = False
         for i in products:
             if i[0].lower() == prod.lower():
                 ifExistInCheck = False
