@@ -1,8 +1,5 @@
 list1 = ['good', 'better', 'the best']
 list2 = [4, 0, 4]
-# Перетворити їх:
-# в кортежі
-# в множини
 
 print("-" * 30)
 print("-", "Lists".center(26, " "), "-")
