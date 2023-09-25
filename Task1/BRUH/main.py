@@ -1,0 +1,1 @@
+print("Bruh xD\n" * 10000)
