@@ -26,10 +26,10 @@ print('-' * 30)
 # 3
 sentence = "Hello world. How are you today?"
 
-print("Vowel letters in each word:", f.findVowelsInEachWord(sentence))
-print("Vowel letters that are not included in any word:", f.findVowelsNotInAnyWord(sentence))
-print("Letters included in a line at least twice:", f.findRepeatedLetters(sentence))
-print("Letters included in a string once:", f.findUniqueLetters(sentence))
+print("All the vowels included in each word:", f.findVowelsInEachWord(sentence))
+print("All vowels that are not included in any word", f.findVowelsNotInAnyWord(sentence))
+print("All letters included in the line at least twice:", f.findRepeatedLetters(sentence))
+print("All letters included in the string once:", f.findUniqueLetters(sentence))
 print('-' * 30)
 
 # --------------------------------------------

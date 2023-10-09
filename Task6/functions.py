@@ -45,13 +45,13 @@ def isParentheses(text: str) -> bool:
 def findVowelsInEachWord(sentence: str) -> list:
     vowels = set("aeiouAEIOU")
     words = sentence.split()
-    result = []
+    common_vowels = set(vowels)
 
     for word in words:
-        word_vowels = [char for char in word if char in vowels]
-        result.append(''.join(word_vowels))
+        word_vowels = set(char for char in word if char in vowels)
+        common_vowels &= word_vowels
 
-    return result
+    return list(common_vowels)
 
 
 # Всі голосні літери, які не входять до жодного слова
