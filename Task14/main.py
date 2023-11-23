@@ -3,13 +3,13 @@ import numpy as np
 import pandas as pd
 
 # 1
-x = np.linspace(-5, 5, 400)
+x = np.linspace(2, 15, 400)
 
 y1 = (136 - 4.2 * x) / 10
 y2 = (132 + 10.1 * x) / 13.8
-y3 = (18.3 * x + 108) / 7.6
+y3 = (18.3 * x - 108) / 7.6
 
-plt.figure(figsize=(7, 7))
+plt.figure(figsize=(6, 6))
 
 plt.plot(x, y1, color='red', linestyle='dashdot', label='4.2x + 10y = 136')
 plt.plot(x, y2, color='blue', linestyle='dotted', label='10.1x - 13.8y = -132')
@@ -17,16 +17,16 @@ plt.plot(x, y3, color='green', linestyle='dashed', label='18.3x - 7.6y = -108')
 
 plt.grid(True, alpha=0.6)
 
-plt.text(0.8, y1[0] - 3, '$4.2x + 10y = 136$', color='red', rotation=-13)
-plt.text(-1, y2[0] + 2, '$4.2x_1 + 10x_2 = 136$', color='blue', rotation=18)
-plt.text(-3, y3[0] + 6, '$18.3x - 7.6y = -108$', color='green', rotation=45)
+plt.text(5, y1[0] - 4, '$4.2x + 10y = 136$', color='red', rotation=-10)
+plt.text(7, y2[0] + 4.5, '$4.2x_1 + 10x_2 = 136$', color='blue', rotation=18)
+plt.text(11, y3[0] + 20, '$18.3x - 7.6y = -108$', color='green', rotation=45)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Intersection of Lines')
 
 plt.legend()
 
-plt.fill_between(x, y2, np.minimum(y1, y3), where=(x < 3.4) & (x > -2.8), color='grey')
+plt.fill_between(x, y2, np.maximum(y1, y3), where=(x < 14.2) & (x > 3.6), color='grey')
 
 plt.show()
 
