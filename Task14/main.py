@@ -13,13 +13,15 @@ plt.figure(figsize=(6, 6))
 
 plt.plot(x, y1, color='red', linestyle='dashdot', label='4.2x + 10y = 136')
 plt.plot(x, y2, color='blue', linestyle='dotted', label='10.1x - 13.8y = -132')
-plt.plot(x, y3, color='green', linestyle='dashed', label='18.3x - 7.6y = -108')
+plt.plot(x, y3, color='green', linestyle='dashed', label='18.3x - 7.6y = 108')
 
 plt.grid(True, alpha=0.6)
 
-plt.text(5, y1[0] - 4, '$4.2x + 10y = 136$', color='red', rotation=-10)
-plt.text(7, y2[0] + 4.5, '$4.2x_1 + 10x_2 = 136$', color='blue', rotation=18)
-plt.text(11, y3[0] + 20, '$18.3x - 7.6y = -108$', color='green', rotation=45)
+print(y1[0], y2[0], y3[0])
+
+plt.text(5, 9, '$4.2x + 10y = 136$', color='red', rotation=-10)
+plt.text(7, 15.5, '$4.2x_1 + 10x_2 = 136$', color='blue', rotation=18)
+plt.text(11, 11, '$18.3x - 7.6y = 108$', color='green', rotation=45)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Intersection of Lines')
@@ -53,11 +55,9 @@ plt.show()
 # 3
 vict = pd.read_csv("lab4.csv", delimiter=',')
 
-labels = ['Female', 'Male']
-sizes = [len(vict[vict['Vict Sex'] == 'F']), len(vict[vict['Vict Sex'] == 'M'])]
-colors = ['lightcoral', 'lightskyblue']
-explode = (0.1, 0)
+plt.pie([len(vict[vict['Vict Sex'] == 'F']), len(vict[vict['Vict Sex'] == 'M'])], explode=(0.1, 0),
+        labels=['Female', 'Male'], colors=['lightcoral', 'lightskyblue'], autopct='%1.1f%%', shadow=True,
+        startangle=140)
 
-plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
 plt.title('Victim Genders')
 plt.show()
