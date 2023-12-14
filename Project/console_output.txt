@@ -1,0 +1,339 @@
+------------------------------
+Information about the data:
+Data types:
+Rank              int64
+Name             object
+Platform         object
+Year            float64
+Genre            object
+Publisher        object
+NA_Sales        float64
+EU_Sales        float64
+JP_Sales        float64
+Other_Sales     float64
+Global_Sales    float64
+dtype: object
+------------------------------
+Head:
+   Rank                      Name Platform  ...  JP_Sales Other_Sales Global_Sales
+0     1                Wii Sports      Wii  ...      3.77        8.46        82.74
+1     2         Super Mario Bros.      NES  ...      6.81        0.77        40.24
+2     3            Mario Kart Wii      Wii  ...      3.79        3.31        35.82
+3     4         Wii Sports Resort      Wii  ...      3.28        2.96        33.00
+4     5  Pokemon Red/Pokemon Blue       GB  ...     10.22        1.00        31.37
+
+[5 rows x 11 columns]
+------------------------------
+Columns:
+Index(['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales',
+       'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales'],
+      dtype='object')
+------------------------------
+Shape:
+(16598, 11)
+------------------------------
+Empty cells:
+Rank              0
+Name              0
+Platform          0
+Year            271
+Genre             0
+Publisher        58
+NA_Sales          0
+EU_Sales          0
+JP_Sales          0
+Other_Sales       0
+Global_Sales      0
+dtype: int64
+------------------------------
+Unique values:
+Rank            16598
+Name            11493
+Platform           31
+Year               39
+Genre              12
+Publisher         578
+NA_Sales          409
+EU_Sales          305
+JP_Sales          244
+Other_Sales       157
+Global_Sales      623
+dtype: int64
+------------------------------
+Describe:
+               Rank          Year  ...   Other_Sales  Global_Sales
+count  16598.000000  16327.000000  ...  16598.000000  16598.000000
+mean    8300.605254   2006.406443  ...      0.048063      0.537441
+std     4791.853933      5.828981  ...      0.188588      1.555028
+min        1.000000   1980.000000  ...      0.000000      0.010000
+25%     4151.250000   2003.000000  ...      0.000000      0.060000
+50%     8300.500000   2007.000000  ...      0.010000      0.170000
+75%    12449.750000   2010.000000  ...      0.040000      0.470000
+max    16600.000000   2020.000000  ...     10.570000     82.740000
+
+[8 rows x 7 columns]
+------------------------------
+Missing ranks: [14200, 654]
+------------------------------
+Delete rows with empty cells:
+------------------------------
+Set 'Year' type to int:
+------------------------------
+Replace empty cells with 'nil':
+------------------------------
+All platforms:
+['Wii' 'NES' 'GB' 'DS' 'X360' 'PS3' 'PS2' 'SNES' 'GBA' '3DS' 'PS4' 'N64'
+ 'PS' 'XB' 'PC' '2600' 'PSP' 'XOne' 'GC' 'WiiU' 'GEN' 'DC' 'PSV' 'SAT'
+ 'SCD' 'WS' 'NG' 'TG16' '3DO' 'GG' 'PCFX']
+------------------------------
+Platforms count:
+31
+------------------------------
+Most popular platform:
+DS
+------------------------------
+Count of games from Valve:
+4
+------------------------------
+Games from 2007 year:
+13                                                 Wii Fit
+43                                                  Halo 3
+48                                      Super Mario Galaxy
+70                          Call of Duty 4: Modern Warfare
+74                                          Mario Party DS
+                               ...                        
+16552             Mahou Sensei Negima!? Neo-Pactio Fight!!
+16558                            Pro Evolution Soccer 2008
+16564        Original Frisbee Disc Sports: Ultimate & Golf
+16573                                  Mini Desktop Racing
+16590    Eiyuu Densetsu: Sora no Kiseki Material Collec...
+Name: Name, Length: 1202, dtype: object
+------------------------------
+Games from 2003 to 2009 years:
+0                                              Wii Sports
+2                                          Mario Kart Wii
+3                                       Wii Sports Resort
+6                                   New Super Mario Bros.
+7                                                Wii Play
+                               ...                       
+16591                                 Myst IV: Revelation
+16592                                            Plushees
+16594                       Men in Black II: Alien Escape
+16595    SCORE International Baja 1000: The Official Game
+16597                                    Spirits & Spells
+Name: Name, Length: 7548, dtype: object
+------------------------------
+Games in 2014 on PC:
+478                                  The Sims 4
+1617                     Farming Simulator 2015
+2315                   The Elder Scrolls Online
+2808                    Dragon Age: Inquisition
+3247                                  Far Cry 4
+3457                                  Titanfall
+3656                    Assassin's Creed: Unity
+4107     World of Warcraft: Warlords of Draenor
+4122                      Football Manager 2015
+4244                 Wolfenstein: The New Order
+4333                                 Watch Dogs
+4740             Call of Duty: Advanced Warfare
+5150     Sid Meier's Civilization: Beyond Earth
+5215             Middle-Earth: Shadow of Mordor
+5911                                    FIFA 15
+6071                Borderlands: The Pre-Sequel
+6298                            The Evil Within
+7682             South Park: The Stick of Truth
+8117                              Dark Souls II
+8443                                   Wildstar
+8598                                   The Crew
+8960                           Alien: Isolation
+9902                                  Tropico 5
+10224                              Thief (2014)
+10695                                   F1 2014
+10838                      Risen 3: Titan Lords
+12227                 Pro Evolution Soccer 2015
+12264                  The LEGO Movie Videogame
+12332              Lego Batman 3: Beyond Gotham
+12688                    Murdered: Soul Suspect
+13050     Sherlock Holmes: Crimes & Punishments
+13103                           LEGO The Hobbit
+13825            Castlevania: Lords of Shadow 2
+14095                   Might & Magic X: Legacy
+14243                             Trials Fusion
+14274             Living Legends: Frozen Beauty
+14469                       Lords of the Fallen
+14778                            GRID Autosport
+15138        Plants vs. Zombies: Garden Warfare
+15145                                  Sacred 3
+15639       Lara Croft and the Temple of Osiris
+15763                    Divinity: Original Sin
+15923                       Pillars of Eternity
+16406           The Amazing Spider-Man 2 (2014)
+Name: Name, dtype: object
+------------------------------
+5 most popular genres:
+Genre
+Action          3253
+Sports          2304
+Misc            1710
+Role-Playing    1471
+Shooter         1282
+Name: count, dtype: int64
+------------------------------
+How many 'Action' games in dataset:
+3253
+------------------------------
+How many 'Assassin's Creed' games in dataset:
+39
+------------------------------
+Total sales in NA:
+4333.43
+------------------------------
+Total sales in EU on PC:
+137.64000000000001
+------------------------------
+Best sales region:
+NA_Sales
+------------------------------
+Best sales region for 'Role-Playing' games:
+JP_Sales
+------------------------------
+Sum of sales for each genre:
+           Genre  NA_Sales  EU_Sales  JP_Sales  Other_Sales
+0         Action    861.80    516.48    158.66       184.92
+1      Adventure    102.06     63.79     52.01        16.70
+2       Fighting    220.74    100.00     87.15        36.19
+3           Misc    402.48    213.82    106.67        74.02
+4       Platform    445.99    200.67    130.65        51.51
+5         Puzzle    122.01     50.53     56.68        12.47
+6         Racing    356.93    236.32     56.61        76.68
+7   Role-Playing    326.50    187.58    350.29        59.38
+8        Shooter    575.16    310.45     38.18       101.90
+9     Simulation    181.78    113.20     63.54        31.36
+10        Sports    670.09    371.34    134.76       132.65
+11      Strategy     67.89     44.94     49.10        11.23
+------------------------------
+Years with average sales more than 0.15 in EU:[1985, 1988, 1989, 1990, 1992, 1996, 1997, 1998, 1999, 2000, 2001, 2012, 2013, 2014, 2015]
+------------------------------
+First 5 genres with the highest sales in NA:
+Genre
+Action       861.80
+Adventure    102.06
+Fighting     220.74
+Misc         402.48
+Platform     445.99
+Name: NA_Sales, dtype: float64
+------------------------------
+Which game is in 128 place all info:
+Name           The Legend of Zelda
+Platform                       NES
+Year                          1986
+Genre                       Action
+Publisher                 Nintendo
+NA_Sales                      3.74
+EU_Sales                      0.93
+JP_Sales                      1.69
+Other_Sales                   0.14
+Name: 127, dtype: object
+------------------------------
+How much does each Publisher earn in each region:
+                              NA_Sales  EU_Sales  JP_Sales  Other_Sales
+Publisher                                                              
+10TACLE Studios                   0.07      0.04      0.00         0.00
+1C Company                        0.01      0.07      0.00         0.02
+20th Century Fox Video Games      1.82      0.10      0.00         0.01
+2D Boy                            0.00      0.03      0.00         0.01
+3DO                               6.48      3.04      0.00         0.63
+...                                ...       ...       ...          ...
+imageepoch Inc.                   0.00      0.00      0.04         0.00
+inXile Entertainment              0.02      0.06      0.00         0.01
+mixi, Inc                         0.00      0.00      0.86         0.00
+nil                               5.78      2.43      0.03         0.10
+responDESIGN                      0.09      0.04      0.00         0.01
+
+[577 rows x 4 columns]
+------------------------------
+Which year was the best for Nintendo in EU:
+2006
+------------------------------
+Publisher with the highest sales:
+    Publisher  Global_Sales
+359  Nintendo       1784.43
+------------------------------
+Publisher with the lowest sales:
+                      Publisher  Global_Sales
+45        Ascaron Entertainment          0.01
+76                     Boost On          0.01
+96                     Commseed          0.01
+132   EON Digital Entertainment          0.01
+147                  Epic Games          0.01
+192                 Genterprise          0.01
+244          Interchannel-Holon          0.01
+248  Interworks Unlimited, Inc.          0.01
+249                Inti Creates          0.01
+309         Media Entertainment          0.01
+319                 Michaelsoft          0.01
+350                  Naxat Soft          0.01
+354         New World Computing          0.01
+375                   Ongakukan          0.01
+377                     Otomate          0.01
+389         Paradox Development          0.01
+397                      Piacci          0.01
+421                  Rain Games          0.01
+466             Stainless Games          0.01
+494                      Takuyo          0.01
+523           UIG Entertainment          0.01
+------------------------------
+The Publishers with sales more than 10 million:
+                                  Publisher  Global_Sales
+4                                       3DO         10.12
+6                                 505 Games         55.91
+10                              989 Studios         13.32
+13                      ASCII Entertainment         10.89
+17                    Acclaim Entertainment         64.14
+21                               Activision        721.41
+53                                    Atari        146.77
+55                                    Atlus         12.74
+63                                Banpresto         17.40
+66                       Bethesda Softworks         81.53
+85                                   Capcom        199.95
+91                              Codemasters         47.77
+109                             D3Publisher         24.06
+120                             Deep Silver         25.59
+126              Disney Interactive Studios        118.76
+137                       Eidos Interactive         96.75
+138                         Electronic Arts       1093.39
+142                      Empire Interactive         11.14
+144                        Enix Corporation         33.74
+177                          GT Interactive         25.23
+214                      Hasbro Interactive         15.22
+224                             Hudson Soft         23.01
+241                              Infogrames         16.18
+275            Konami Digital Entertainment        278.56
+281                                 Level 5         12.17
+288                               LucasArts         84.95
+292                               MTV Games         18.86
+296                   Majesco Entertainment         15.81
+323                  Microsoft Game Studios        245.79
+325                            Midway Games         69.29
+347                      Namco Bandai Games        253.65
+359                                Nintendo       1784.43
+362                    Nippon Ichi Software         13.98
+430                       Rising Star Games         17.27
+445                                    Sega        270.70
+455             Sony Computer Entertainment        607.28
+457      Sony Computer Entertainment Europe         23.89
+464                             Square Enix        144.73
+465                              SquareSoft         57.65
+487                                     THQ        340.44
+493                    Take-Two Interactive        399.30
+499                              Tecmo Koei         53.55
+524                                 Ubisoft        473.54
+527                   Universal Interactive         17.60
+528                                 Unknown         13.64
+540                      Virgin Interactive         43.87
+543                           Vivendi Games         56.93
+547  Warner Bros. Interactive Entertainment        142.34
+564                  Zoo Digital Publishing         12.87
+------------------------------
+
+Process finished with exit code 0
